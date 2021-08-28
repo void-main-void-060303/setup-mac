@@ -1,3 +1,7 @@
+# 表示色
+export LSCOLORS=gxfxcxdxbxegedabagacad
+export LS_COLORS='di=36:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+
 # git
 autoload -Uz vcs_info
 setopt prompt_subst
@@ -13,8 +17,11 @@ PROMPT='%B%F{yellow}[%D{%Y/%m/%d(%a) %T}] %F{green}%n@%m %F{magenta}%d %F{cyan}$
 %% '
 RPROMPT='%D{%Y/%m/%d(%a) %T'
 
+# homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # gitの補完
-fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 
 # 補完機能
 autoload -Uz compinit
@@ -64,12 +71,17 @@ bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
 # anyenv
-export PYENV_ROOT="$HOME/.anyenv/envs/pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(anyenv init -)"
+#export PYENV_ROOT="$HOME/.anyenv/envs/pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init --path)"
+#eval "$(anyenv init -)"
+
+# asdf
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # alias
 alias ls='ls -G'
 alias ll='ls -ahloG'
 
+# asdfをx86_64で実行するエイリアス
+alias aasdf='arch -x86_64 asdf'
