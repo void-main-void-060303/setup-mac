@@ -2,7 +2,12 @@
 新品Macをフロントエンド開発ができる状態までセットアップする手順。
 
 ## zsh
-zshrcとzprofileをホームディレクトリに戦闘にドットを付けてコピーする。
+このリポジトリのディレクトリで実行することを想定。
+```
+cp zshrc ${HOME}/.zshrc
+cp zprofile ${HOME}/.zprofile
+source ${HOME}/.zprofile
+```
 
 ## システム環境設定
 Apple ID > メディアと購入
@@ -65,7 +70,13 @@ asdf global yarn $(asdf list all yarn | tail -n 1)
 
 ## SSH鍵の作成
 githubなどなどで使用
-```ssh-keygen -t rsa -b 4096 -C "hogehoge@fuga.com"```
+```
+ssh-keygen -t rsa -b 4096 -C "hogehoge@fuga.com"
+cp config ${HOME}/.ssh/config
+```
+
+## gitのおまじない
+```git config --global credential.helper osxkeychain```
 
 ## オプション
 google-chrome-canary - homebrew
