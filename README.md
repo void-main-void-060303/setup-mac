@@ -79,7 +79,23 @@ cp config ${HOME}/.ssh/config
 ```git config --global credential.helper osxkeychain```
 
 ## オプション
-google-chrome-canary - homebrew
+```
+# [Google Chrome Canary](https://www.google.com/intl/ja/chrome/canary/)
+brew install --cask google-chrome-canary
+# [Microsoft Edge](https://www.microsoft.com/ja-jp/edge)
+brew install --cask microsoft-edge
+# [mozilla Firefox](https://www.mozilla.org/ja/firefox/new/)
+brew install --cask firefox
+# [mozilla Firefox Developper Edition](https://www.mozilla.org/ja/firefox/developer/)
+brew install --cask firefox-developer-edition
+# [Opera](https://www.opera.com/ja/computer/opera)
+brew install --cask opera
+# [Opera neon](https://www.opera.com/ja/computer/neon)
+brew install --cask opera-neon
+# [Zeplin](https://zeplin.io/)
+brew install --cask zeplin
+```
+
 
 	
 
