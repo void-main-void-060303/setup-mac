@@ -72,7 +72,7 @@ asdf global yarn $(asdf list all yarn | tail -n 1)
 githubなどなどで使用
 ```
 ssh-keygen -t rsa -b 4096 -C "hogehoge@fuga.com"
-cp config ${HOME}/.ssh/config
+cp ssh_config ${HOME}/.ssh/config
 ```
 
 ## gitのおまじない
@@ -95,9 +95,8 @@ brew install --cask opera-neon
 # [Zeplin](https://zeplin.io/)
 brew install --cask zeplin
 ```
-
-
-	
-
-
-
+# フォント
+font-myrica
+font-myricam
+font-ricty-diminished
+font-source-han-code-jp
